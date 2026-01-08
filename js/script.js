@@ -1,16 +1,12 @@
-// Simple enhancement – can be expanded later
-console.log("Elegant Events website loaded successfully");
-
-// Example future use:
-// form validation
-// animations
-// popup gallery
-// HERO CAROUSEL SCRIPT
-let slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
+// HERO CAROUSEL
+const slides = document.querySelectorAll(".slide");
+let current = 0;
 
 setInterval(() => {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
+  slides[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active");
 }, 4000);
+
+// Confirmation log
+console.log("Elegant Events home page loaded");
